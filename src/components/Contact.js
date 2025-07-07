@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 import SplitText from './ui/SplitText';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -121,13 +122,13 @@ const ContactUs = () => {
             </div>
 
             <div ref={buttonRef} className="mt-12 text-right opacity-0">
-              <a
-                href="mailto:contact@davidhaz.com"
+              <Link
+                to="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 text-xl text-right bg-white text-black font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-105"
               >
                 Let's Discuss
                 <ArrowUpRight className="stroke-3 w-4 h-4 ml-2" />
-              </a>
+              </Link>
             </div>
 
             <p ref={emailTextRef} className="mt-6 text-base text-gray-100 text-right opacity-0">

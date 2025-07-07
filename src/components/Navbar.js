@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [hasEntered, setHasEntered] = useState(false);
+  const hasAnimatedRef = useRef(false);
   const location = useLocation(); // Hook to get current URL location
 
   useEffect(() => {
@@ -15,12 +16,18 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Entry animation effect
+  // Entry animation effect - only play once per session
   useEffect(() => {
-    const timer = setTimeout(() => {
+    if (!hasAnimatedRef.current) {
+      const timer = setTimeout(() => {
+        setHasEntered(true);
+        hasAnimatedRef.current = true;
+      }, 200); // Small delay to ensure smooth animation
+      return () => clearTimeout(timer);
+    } else {
+      // If animation has already played, set hasEntered to true immediately
       setHasEntered(true);
-    }, 200); // Small delay to ensure smooth animation
-    return () => clearTimeout(timer);
+    }
   }, []);
 
   // Close drawer on link click (mobile)

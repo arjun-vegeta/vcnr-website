@@ -1,20 +1,32 @@
 // src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar'; 
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import Homepage from './Homepage';
-import Chatbot from './components/ChatBot'
+import Chatbot from './components/ChatBot';
+import ContactPage from './components/ContactPage'; // <--- Import the new ContactPage
 
-// Placeholder pages
+// ScrollToTop component to scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
+// Placeholder pages (you'll replace these with actual components later)
 const AboutPage = () => <div><h1>About Page</h1></div>;
 const ServicesPage = () => <div><h1>Services Page</h1></div>;
 const FAQPage = () => <div><h1>FAQ Page</h1></div>;
-const ContactPage = () => <div><h1>Contact Page</h1></div>;
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <Navbar />
 
         <Routes>
@@ -22,7 +34,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/faq" element={<FAQPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/contact" element={<ContactPage />} /> {/* <--- Use the new ContactPage here */}
         </Routes>
 
         {/* 2. Add the Chatbot here */}
