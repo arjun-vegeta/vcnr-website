@@ -87,7 +87,7 @@ const ContactUs = () => {
 
   return (
     <div ref={sectionRef} className="bg-black font-sans">
-      <div className="flex items-center justify-center p-4 md:p-16">
+      <div className="flex items-center justify-center px-4 pb-12 pt-24 md:pt-28 md:px-16">
         <div className="relative w-full h-[75vh] md:h-[500px] rounded-3xl overflow-hidden">
           {/* Background Video */}
           <video
@@ -123,7 +123,7 @@ const ContactUs = () => {
             <div ref={buttonRef} className="mt-12 text-right opacity-0">
               <a
                 href="mailto:contact@davidhaz.com"
-                className="inline-flex items-center justify-center px-6 py-3 text-xl text-right bg-white text-black font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-110"
+                className="inline-flex items-center justify-center px-6 py-3 text-xl text-right bg-white text-black font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-105"
               >
                 Let's Discuss
                 <ArrowUpRight className="stroke-3 w-4 h-4 ml-2" />
