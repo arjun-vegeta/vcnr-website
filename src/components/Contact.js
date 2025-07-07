@@ -104,12 +104,13 @@ const ContactUs = () => {
           {/* Overlay with content */}
           <div className="relative z-10 flex flex-col items-left justify-center h-full text-white p-8 md:p-16">
             <div ref={titleRef} className="opacity-0">
+              
               <SplitText
                 text="Want to create something awesome together?"
                 className="text-5xl md:text-7xl font-bold tracking-tight text-left max-w-3xl"
                 splitType="words"
-                delay={80}
-                duration={0.6}
+                delay={100}
+                duration={0.9}
                 ease="power3.out"
                 from={{ opacity: 0, y: 40 }}
                 to={{ opacity: 1, y: 0 }}
@@ -122,7 +123,7 @@ const ContactUs = () => {
             <div ref={buttonRef} className="mt-12 text-right opacity-0">
               <a
                 href="mailto:contact@davidhaz.com"
-                className="inline-flex items-center justify-center px-6 py-3 text-xl text-right bg-white text-black font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-105"
+                className="inline-flex items-center justify-center px-6 py-3 text-xl text-right bg-white text-black font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-110"
               >
                 Let's Discuss
                 <ArrowUpRight className="stroke-3 w-4 h-4 ml-2" />

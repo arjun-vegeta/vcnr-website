@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitText from './ui/SplitText';
 import GradientText from './ui/GradientText';
+import Button from './ui/Button';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -243,7 +244,13 @@ const Brands = () => {
                             />
                             <p className="absolute bottom-[15px] left-1/2 -translate-x-1/2 text-sm text-center font-medium text-gray-300 opacity-0 
                              transition-opacity duration-300 md:group-hover/card:opacity-100 flex items-center gap-1">
-                                {brand.name}
+                                <GradientText
+                                    colors={["#FFFFFF", "#A39AC1", "#FFFFFF", "#FFFFFF"]}
+                                    animationSpeed={2}
+                                    className="text-sm font-medium"
+                                >
+                                    {brand.name}
+                                </GradientText>
                                 <span className="relative top-[1px]">
                                     <ArrowUpRight size={14} />
                                 </span>
@@ -255,11 +262,9 @@ const Brands = () => {
 
                 {isMobile && hasMoreBrands && (
                     <div ref={showMoreButtonRef} className="flex justify-center mt-8 opacity-0">
-                        <button
+                        <Button
                             onClick={() => setShowAllBrands(!showAllBrands)}
-                            className="flex items-center gap-2 px-6 py-3 bg-bg-black text-white
-                                     border border-white rounded-full md:hover:bg-primary-purple/20 
-                                     transition-all duration-300 font-medium"
+                            className="flex items-center gap-2"
                         >
                             {showAllBrands ? (
                                 <>
@@ -272,7 +277,7 @@ const Brands = () => {
                                     <ChevronDown size={16} />
                                 </>
                             )}
-                        </button>
+                        </Button>
                     </div>
                 )}
             </div>
