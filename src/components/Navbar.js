@@ -60,10 +60,29 @@ const Navbar = () => {
           }`}
       >
         <div className="flex items-center justify-between w-full max-w-[1400px] transition-all duration-1000 ease-in-out">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" onClick={handleLinkClick}> {/* Changed to Link */}
-              <img src="/logo.png" alt="Logo" className="h-8 w-auto" />
+        {/* Logo */}
+        <div className="flex-shrink-0 relative">
+            <Link to="/" onClick={handleLinkClick}>
+              {/* Logo with company name - visible when not scrolled */}
+              <img 
+                src="/whitelogo.png" 
+                alt="Logo" 
+                className={`h-8 w-auto transition-all duration-700 ease-in-out absolute top-0 left-0 ${
+                  scrolled 
+                    ? 'opacity-0 scale-95 translate-y-1' 
+                    : 'opacity-100 scale-100 translate-y-0'
+                }`}
+              />
+              {/* Company icon - visible when scrolled */}
+              <img 
+                src="/logo.png" 
+                alt="Company Icon" 
+                className={`h-8 w-auto transition-all duration-700 ease-in-out ${
+                  scrolled 
+                    ? 'opacity-100 scale-100 translate-y-0' 
+                    : 'opacity-0 scale-95 translate-y-1'
+                }`}
+              />
             </Link>
           </div>
 

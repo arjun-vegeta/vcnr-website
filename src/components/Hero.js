@@ -60,8 +60,8 @@ const Hero = () => {
 
       {/* Main Title at Top */}
       <div className="relative z-20 h-[25dvh] md:h-[30dvh] lg:h-[35dvh] flex items-center justify-center px-4">
-        <h1 className="text-white text-5xl md:text-8xl lg:text-7xl xl:text-[160px] font-medium tracking-normal m-0" style={{ fontFamily: 'Prompt, sans-serif' }}>
-          VCNR Group<span style={{ color: '#6A41E7' }}>.</span>
+      <h1 className="text-white text-[54px] md:text-8xl lg:text-9xl xl:text-[160px] font-medium tracking-normal m-0" style={{ fontFamily: 'Prompt, sans-serif' }}>
+      VCNR Group<span style={{ color: '#6A41E7' }}>.</span>
         </h1>
       </div>
 

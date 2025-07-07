@@ -186,8 +186,8 @@ const Brands = () => {
     const hasMoreBrands = brandsData.length > 4;
 
     return (
-        <div ref={sectionRef} className="bg-dark-bg relative z-20 text-white font-sans pt-20 p-8 md:p-16 min-h-screen">
-            <div className="max-w-7xl px-5 lg:px-8 mx-auto">
+        <div ref={sectionRef} className="bg-dark-bg relative z-20 text-white font-sans pt-20 w-full min-h-screen">
+            <div className="max-w-7xl w-full px-5 lg:px-8 mx-auto">
                 <div className="flex justify-between items-start flex-wrap gap-8 mb-16">
                     <div>
                         <div ref={customerStoriesRef} className="text-sm font-medium tracking-wider flex items-center mb-2 opacity-0">

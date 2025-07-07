@@ -141,9 +141,18 @@ const ContactUs = () => {
       
       {/* Copyright Bar */}
       <div className="border-t mt-10 border-gray-800 py-10 px-4 md:px-16">
-        <div ref={copyrightRef} className="text-center text-gray-300 text-base opacity-0">
-          © 2024 VCNR. All rights reserved. | Privacy Policy | Terms of Service
-        </div>
+          <div ref={copyrightRef} className="text-center text-gray-300 text-base opacity-0">
+            © 2025 VCNR. All rights reserved.
+            <span className="block md:inline">
+              <span className="mx-2 hidden md:inline">|</span>
+              <br className="md:hidden leading-[0.2rem]" />
+              <span className="inline-block md:inline align-top md:align-baseline mt-[-20px] md:mt-0">
+                Privacy Policy
+                <span className="mx-2">|</span>
+                Terms of Service
+              </span>
+            </span>
+          </div>
       </div>
     </div>
   );

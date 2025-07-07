@@ -210,9 +210,9 @@ const CoreBusiness = () => {
                 </div>
 
                 {/* Left Panel - Cards (moved down for small screens) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 flex-1 min-w-[350px] lg:min-w-[600px] order-2 lg:order-1"> {/* Adjusted order */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 flex-1 w-auto md:min-w-[600px] order-2 lg:order-1"> {/* Adjusted order and width */}
                     {/* Agriculture Card */}
-                    <div ref={el => cardsRef.current[0] = el} className="bg-black border border-white border-opacity-15 rounded-3xl p-6 flex flex-col gap-3 shadow-md opacity-0">
+                    <div ref={el => cardsRef.current[0] = el} className="bg-black border border-white border-opacity-15 rounded-3xl p-8 md:p-6 flex flex-col gap-3 shadow-md opacity-0 w-auto">{/* p-8 on mobile, p-6 on md+; w-auto for mobile */}
                         <IconWrapper>
                             <Leaf size={24} />
                         </IconWrapper>
@@ -223,7 +223,7 @@ const CoreBusiness = () => {
                     </div>
 
                     {/* Construction Card */}
-                    <div ref={el => cardsRef.current[1] = el} className="bg-black border border-white border-opacity-15 rounded-3xl p-6 flex flex-col gap-3 shadow-md opacity-0">
+                    <div ref={el => cardsRef.current[1] = el} className="bg-black border border-white border-opacity-15 rounded-3xl p-8 md:p-6 flex flex-col gap-3 shadow-md opacity-0 w-auto">{/* p-8 on mobile, p-6 on md+; w-auto for mobile */}
                         <IconWrapper>
                             <Hammer size={24} />
                         </IconWrapper>
@@ -234,7 +234,7 @@ const CoreBusiness = () => {
                     </div>
 
                     {/* Healthcare Card */}
-                    <div ref={el => cardsRef.current[2] = el} className="bg-black border border-white border-opacity-15 rounded-3xl p-6 flex flex-col gap-3 shadow-md opacity-0">
+                    <div ref={el => cardsRef.current[2] = el} className="bg-black border border-white border-opacity-15 rounded-3xl p-8 md:p-6 flex flex-col gap-3 shadow-md opacity-0 w-auto">{/* p-8 on mobile, p-6 on md+; w-auto for mobile */}
                         <IconWrapper>
                             <HeartPulse size={24} />
                         </IconWrapper>
@@ -245,7 +245,7 @@ const CoreBusiness = () => {
                     </div>
 
                     {/* Technology Card */}
-                    <div ref={el => cardsRef.current[3] = el} className="bg-black border border-white border-opacity-15 rounded-3xl p-6 flex flex-col gap-3 shadow-md opacity-0">
+                    <div ref={el => cardsRef.current[3] = el} className="bg-black border border-white border-opacity-15 rounded-3xl p-8 md:p-6 flex flex-col gap-3 shadow-md opacity-0 w-auto">{/* p-8 on mobile, p-6 on md+; w-auto for mobile */}
                         <IconWrapper>
                             <Laptop size={24} />
                         </IconWrapper>
